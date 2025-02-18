@@ -35,6 +35,17 @@
     # # fonts?
     (nerdfonts.override { fonts = [ "Hack" ]; })
 
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.night-theme-switcher
+    gnomeExtensions.pop-shell
+    gnomeExtensions.notification-timeout
+    gnomeExtensions.tray-icons-reloaded
+    gnome-pomodoro
+    
+    gnome-extension-manager
+    dconf-editor
+
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
@@ -194,6 +205,46 @@
         nodejs.disabled = false;
         python.disabled = false;
       };
+    };
+  };
+
+  dconf.settings = {
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+      enabled-extensions = [
+        "dash-to-dock@micxgx.gmail.com"
+        "clipboard-indicator@tudmotu.com"
+        "nightthemeswitcher@romainvigier.fr"
+        "pop-shell@system76.com"
+        "notification-timeout@codito.github.com"
+        "tray-icons-reloaded@selfmade.pl"
+        "pomodoro@arun.codito.in"
+      ];
+    };
+
+    "org/gnome/shell/extensions/pop-shell" = {
+      	"active-hint"=false;
+        "active-hint-border-radius"="uint32 6";
+        "tile-by-default"=true;
+        "gap-inner"="uint32 2";
+        "gap-outer"="uint32 2";
+        "mouse-cursor-follows-active-window"=true;
+        "show-skip-taskbar"=true;
+        "show-title"=true;
+        "stacking-with-mouse"=true;
+    };
+
+    "org/gnome/shell/extensions/dash-to-dock" = {
+      "dock-fixed" = true;
+      "extend-height" = true;
+      "multi-monitor" = true;
+      "force-straight-corner" = true;
+      "always-center-icons" = true;
+      "show-show-apps-button" = false;
+      "dash-max-icon-size" = 32;
+      "custom-theme-shrink" = true;
+      "custom-theme-running-dots" = true;
+      "running-indicator-style"="DOTS";
     };
   };
 }
