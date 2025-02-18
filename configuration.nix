@@ -181,4 +181,6 @@
     fsType = "cifs";
     options = [ "credentials=/home/benedikt/secrets/.local-nas-credentials" "uid=1000" "gid=1000" "_netdev" "defaults" ];
   };
+
+  virtualisation.docker.enable = true;
 }
