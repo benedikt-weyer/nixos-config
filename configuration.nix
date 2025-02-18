@@ -105,7 +105,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       brave
-      alacritty
+      # alacritty
       git
     ];
   };
