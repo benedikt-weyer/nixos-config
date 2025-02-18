@@ -232,6 +232,10 @@
         "show-skip-taskbar"=true;
         "show-title"=true;
         "stacking-with-mouse"=true;
+        "tile-left" = [];
+        "tile-right" = [];
+        "focus-left" = [];
+        "focus-right" = [];
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -245,6 +249,40 @@
       "custom-theme-shrink" = true;
       "custom-theme-running-dots" = true;
       "running-indicator-style"="DOTS";
+    };
+
+    "org/gnome/desktop/wm/keybindings" = {
+      close = ["<Super>x"];
+      switch-to-workspace-left = ["<Super>Left"];
+      switch-to-workspace-right = ["<Super>Right"];
+      move-to-workspace-left = ["<Super><Alt>Left"];
+      move-to-workspace-right = ["<Super><Alt>Right"];
+      move-to-monitor-left = ["<Super><Control>Left"];
+      move-to-monitor-right = ["<Super><Control>Right"];
+
+      toggle-tiled-left = [];
+      toggle-tiled-right = [];
+      move-to-side-e = [];
+      move-to-side-w = [];
+    };
+
+    "org/gnome/desktop/input-sources" = {
+      "xkb-options" = [ "lv3:caps_switch" ];
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      "focus-mode" = "sloppy";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      "custom-keybindings" = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      "binding" = "<Super>c";
+      "command" = "${pkgs.alacritty}/bin/alacritty";
+      "name" = "Launch Alacritty";
     };
   };
 }
