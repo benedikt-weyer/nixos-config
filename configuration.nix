@@ -136,6 +136,7 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     # home-manager
+    cifs-utils
    
   ];
 
@@ -168,4 +169,16 @@
   
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  fileSystems."/mnt/Local_Share" = {
+    device = "//nvme-nas.home.arpa/Local_Share";
+    fsType = "cifs";
+    options = [ "credentials=/home/benedikt/secrets/.local-nas-credentials" "uid=1000" "gid=1000" "_netdev" "defaults" ];
+  };
+
+  fileSystems."/mnt/Backups" = {
+    device = "//nvme-nas.home.arpa/Backups";
+    fsType = "cifs";
+    options = [ "credentials=/home/benedikt/secrets/.local-nas-credentials" "uid=1000" "gid=1000" "_netdev" "defaults" ];
+  };
 }
