@@ -77,6 +77,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    SHELL = "${pkgs.zsh}/bin/zsh";
   };
 
   # Let Home Manager install and manage itself.
@@ -109,6 +110,9 @@
     alacritty = {
       enable = true;
       settings = {
+        terminal.shell = {
+          program = "${pkgs.zsh}/bin/zsh";
+        };
         window = {
           opacity = 0.7;
         };
@@ -127,6 +131,68 @@
           };
           size = 12;
         };
+      };
+    };
+
+    zsh = {
+      enable = true;
+      enableAutosuggestions = true;
+      enableSyntaxHighlighting = true;
+      
+      oh-my-zsh = {
+        enable = true;
+        theme = "robbyrussell";
+        plugins = [
+          "git"
+          #"fzf-tab"
+          #"fzf"
+          #"zsh-autosuggestions"
+          "sudo"
+          "web-search"
+          #"zsh-syntax-highlighting"
+          #"fast-syntax-highlighting"
+          "copypath"
+          "copyfile"
+          "copybuffer"
+          "dirhistory"
+          "jsontools"
+        ];
+      };
+
+      shellAliases = {
+        ll = "ls -l";
+        update = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+      };
+    };
+
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+      defaultCommand = "fd --type f --hidden --follow --exclude .git";
+      defaultOptions = [
+        "--height 40%"
+        "--layout=reverse"
+        "--border"
+        "--info=inline"
+      ];
+      fileWidgetCommand = "fd --type f";
+      fileWidgetOptions = [
+        "--preview 'bat --style=numbers --color=always --line-range :500 {}'"
+      ];
+    };
+
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = {
+        add_newline = false;
+        character = {
+          success_symbol = "[➜](bold green)";
+          error_symbol = "[✗](bold red)";
+        };
+        package.disabled = false;
+        nodejs.disabled = false;
+        python.disabled = false;
       };
     };
   };
