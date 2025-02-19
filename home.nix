@@ -424,18 +424,19 @@
     };
 
     "org/gnome/shell/extensions/pop-shell" = {
-      	"active-hint"=false;
-        "active-hint-border-radius"=6;
-        "tile-by-default"=true;
-        "gap-inner"=2;
-        "gap-outer"=2;
-        "show-skip-taskbar"=true;
-        "show-title"=true;
-        "stacking-with-mouse"=false;
-        "focus-left" = ["<Super><Shift>Left"];
-        "focus-right" = ["<Super><Shift>Right"];
-        "pop-monitor-left" = ["<Super><Control>Left"];
-        "pop-monitor-right" = ["<Super><Control>Right"];
+      "active-hint"=false;
+      "active-hint-border-radius"=6;
+      "tile-by-default"=true;
+      "gap-inner"=1;
+      "gap-outer"=1;
+      "show-skip-taskbar"=true;
+      "show-title"=true;
+      "stacking-with-mouse"=false;
+      "focus-left" = ["<Super><Shift>Left"];
+      "focus-right" = ["<Super><Shift>Right"];
+      "pop-monitor-left" = ["<Super><Control>Left"];
+      "pop-monitor-right" = ["<Super><Control>Right"];
+      "smart-gaps"=true;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
