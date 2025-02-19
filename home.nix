@@ -41,7 +41,9 @@
     gnomeExtensions.pop-shell
     gnomeExtensions.notification-timeout
     gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.mouse-follows-focus-2
     gnome-pomodoro
+    
     
     gnome-extension-manager
     dconf-editor
@@ -244,6 +246,7 @@
         "notification-timeout@codito.github.com"
         "tray-icons-reloaded@selfmade.pl"
         "pomodoro@arun.codito.in"
+        "mouse-follows-focus@crisidev.org"
       ];
     };
 
