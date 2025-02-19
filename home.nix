@@ -138,6 +138,12 @@
         "terminal.integrated.fontFamily" = "'GeistMono NFM'";
         "terminal.integrated.fontSize" = 14;
         "editor.fontLigatures" = true;
+        "terminal.integrated.defaultProfile.linux" = "zsh";
+        "terminal.integrated.profiles.linux" = {
+          zsh = {
+            path = "${pkgs.zsh}/bin/zsh";
+          };
+        };
       };
     };
 
