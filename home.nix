@@ -46,6 +46,7 @@
         "JetBrainsMono"
       ];
     })
+    roboto
 
     gnomeExtensions.dash-to-dock
     gnomeExtensions.clipboard-indicator
