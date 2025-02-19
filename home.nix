@@ -46,6 +46,16 @@
     gnome-extension-manager
     dconf-editor
 
+    direnv
+    spotify
+    filezilla
+    xpipe
+    libreoffice
+    bitwig-studio
+    anytype
+    fastfetch
+    lsd
+
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
@@ -173,6 +183,8 @@
       shellAliases = {
         ll = "ls -l";
         update = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+        ff = "fastfetch";
+        ls = "lsd -a";
       };
     };
 
@@ -232,10 +244,6 @@
         "show-skip-taskbar"=true;
         "show-title"=true;
         "stacking-with-mouse"=true;
-        "tile-left" = [];
-        "tile-right" = [];
-        "focus-left" = [];
-        "focus-right" = [];
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
