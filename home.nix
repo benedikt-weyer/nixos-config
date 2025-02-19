@@ -134,11 +134,16 @@
         # yzhang.markdown-all-in-one
       ];
       userSettings = {
+        "git.confirmSync" = false;
+        
+        "editor.formatOnSave" = true;
+        "editor.wordWrap" = "on";
         "editor.fontFamily" = "'JetBrainsMono NFM'";
         "editor.fontSize" = 14;
+        "editor.fontLigatures" = true;
+
         "terminal.integrated.fontFamily" = "'GeistMono NFM'";
         "terminal.integrated.fontSize" = 14;
-        "editor.fontLigatures" = true;
         "terminal.integrated.defaultProfile.linux" = "zsh";
         "terminal.integrated.profiles.linux" = {
           zsh = {
