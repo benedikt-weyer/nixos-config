@@ -44,6 +44,9 @@
     gnomeExtensions.mouse-follows-focus-2
     gnome-pomodoro
     
+    nodejs_22
+    pnpm_10
+    bun
     
     gnome-extension-manager
     dconf-editor
