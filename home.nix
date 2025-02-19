@@ -249,16 +249,17 @@
 
     "org/gnome/shell/extensions/pop-shell" = {
       	"active-hint"=false;
-        "active-hint-border-radius"="uint32 6";
+        "active-hint-border-radius"=6;
         "tile-by-default"=true;
-        "gap-inner"="uint32 2";
-        "gap-outer"="uint32 2";
-        "mouse-cursor-follows-active-window"=true;
+        "gap-inner"=2;
+        "gap-outer"=2;
         "show-skip-taskbar"=true;
         "show-title"=true;
-        "stacking-with-mouse"=true;
+        "stacking-with-mouse"=false;
         "focus-left" = ["<Super><Shift>Left"];
         "focus-right" = ["<Super><Shift>Right"];
+        "pop-monitor-left" = ["<Super><Control>Left"];
+        "pop-monitor-right" = ["<Super><Control>Right"];
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -280,8 +281,8 @@
       switch-to-workspace-right = ["<Super>Right"];
       move-to-workspace-left = ["<Super><Alt>Left"];
       move-to-workspace-right = ["<Super><Alt>Right"];
-      move-to-monitor-left = ["<Super><Control>Left"];
-      move-to-monitor-right = ["<Super><Control>Right"];
+      move-to-monitor-left = [];
+      move-to-monitor-right = [];
 
       toggle-tiled-left = [];
       toggle-tiled-right = [];
