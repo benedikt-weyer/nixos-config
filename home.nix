@@ -280,6 +280,7 @@
 
     "org/gnome/desktop/wm/preferences" = {
       "focus-mode" = "sloppy";
+      "button-layout" = "appmenu:minimize,maximize,close";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
