@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   inputs,
   ...
 }:
@@ -529,7 +530,7 @@
       "sleep-inactive-battery-type" = "nothing";
     };
     "org/gnome/desktop/session" = {
-      "idle-delay" = "uint32 0";
+      "idle-delay" = lib.hm.gvariant.mkUint32 (0);
     };
   };
 
