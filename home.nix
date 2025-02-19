@@ -293,5 +293,15 @@
       "command" = "${pkgs.alacritty}/bin/alacritty";
       "name" = "Launch Alacritty";
     };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      "sleep-inactive-ac-timeout" = 0;
+      "sleep-inactive-battery-timeout" = 0;
+      "sleep-inactive-ac-type" = "nothing";
+      "sleep-inactive-battery-type" = "nothing";
+    };
+    "org/gnome/desktop/session" = {
+      "idle-delay" = "uint32 0";
+    };
   };
 }
