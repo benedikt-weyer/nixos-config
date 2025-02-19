@@ -257,6 +257,8 @@
         "show-skip-taskbar"=true;
         "show-title"=true;
         "stacking-with-mouse"=true;
+        "focus-left" = ["<Super><Shift>Left"];
+        "focus-right" = ["<Super><Shift>Right"];
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
