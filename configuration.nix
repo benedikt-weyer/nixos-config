@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 # let
 #  nixvim = import (builtins.fetchGit {
 #    url = "https://github.com/nix-community/nixvim.git";
@@ -182,4 +182,6 @@
   };
 
   virtualisation.docker.enable = true;
+
+  swapDevices = lib.mkForce [];
 }
