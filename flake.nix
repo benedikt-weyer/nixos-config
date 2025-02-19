@@ -18,14 +18,21 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixvim, ... }@inputs: {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./configuration.nix
-        inputs.home-manager.nixosModules.default
-	# nixvim.nixosModules.nixvim
-      ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixvim,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+          inputs.home-manager.nixosModules.default
+          # nixvim.nixosModules.nixvim
+        ];
+      };
     };
-  };
 }

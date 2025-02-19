@@ -2,31 +2,37 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, lib, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 # let
 #  nixvim = import (builtins.fetchGit {
 #    url = "https://github.com/nix-community/nixvim.git";
-    # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
+# If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
 #    ref = "nixos-24.11";
 #    allRefs = true;
-#  }); 
- # home-manager = import (builtins.fetchGit {
-  #  url = "https://github.com/nix-community/home-manager.git";
-   # ref = "release-24.11"; # or any other specific branch or commit
-    #allRefs = true;
-  #});
+#  });
+# home-manager = import (builtins.fetchGit {
+#  url = "https://github.com/nix-community/home-manager.git";
+# ref = "release-24.11"; # or any other specific branch or commit
+#allRefs = true;
+#});
 #in
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # For NixOS
-      #inputs.nixvim.nixosModules.nixvim
-     
-       inputs.home-manager.nixosModules.default
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # For NixOS
+    #inputs.nixvim.nixosModules.nixvim
 
-     #  inputs.nixvim.homeManagerModules.nixvim
-    ];
+    inputs.home-manager.nixosModules.default
+
+    #  inputs.nixvim.homeManagerModules.nixvim
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -101,7 +107,7 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
     # Modesetting is required.
@@ -109,7 +115,7 @@
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
     # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
     # of just the bare essentials.
     powerManagement.enable = false;
 
@@ -119,14 +125,14 @@
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     open = false;
 
     # Enable the Nvidia settings menu,
-	  # accessible via `nvidia-settings`.
+    # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
@@ -140,7 +146,10 @@
   users.users.benedikt = {
     isNormalUser = true;
     description = "Benedikt Weyer";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       brave
       # alacritty
@@ -157,8 +166,8 @@
   #programs.nixvim = {
   #  enable = true;
 
-#    colorschemes.catppuccin.enable = true;
- #   plugins.lualine.enable = true;
+  #    colorschemes.catppuccin.enable = true;
+  #   plugins.lualine.enable = true;
   #};
 
   # Install firefox.
@@ -170,8 +179,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
     # home-manager
     cifs-utils
   ];
@@ -202,23 +211,37 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-  
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   fileSystems."/mnt/Local_Share" = {
     device = "//nvme-nas.home.arpa/Local_Share";
     fsType = "cifs";
-    options = [ "credentials=/home/benedikt/secrets/.local-nas-credentials" "uid=1000" "gid=1000" "_netdev" "defaults" ];
+    options = [
+      "credentials=/home/benedikt/secrets/.local-nas-credentials"
+      "uid=1000"
+      "gid=1000"
+      "_netdev"
+      "defaults"
+    ];
   };
 
   fileSystems."/mnt/Backups" = {
     device = "//nvme-nas.home.arpa/Backups";
     fsType = "cifs";
-    options = [ "credentials=/home/benedikt/secrets/.local-nas-credentials" "uid=1000" "gid=1000" "_netdev" "defaults" ];
+    options = [
+      "credentials=/home/benedikt/secrets/.local-nas-credentials"
+      "uid=1000"
+      "gid=1000"
+      "_netdev"
+      "defaults"
+    ];
   };
 
   virtualisation.docker.enable = true;
 
-  swapDevices = lib.mkForce [];
+  swapDevices = lib.mkForce [ ];
 }
