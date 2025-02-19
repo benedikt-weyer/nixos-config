@@ -116,6 +116,7 @@
         oil.enable = true;
         treesitter.enable = true;
         luasnip.enable = true;
+        web-devicons.enable = true;
       };
     };
 
@@ -157,8 +158,8 @@
 
     zsh = {
       enable = true;
-      enableAutosuggestions = true;
-      enableSyntaxHighlighting = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
       
       oh-my-zsh = {
         enable = true;
