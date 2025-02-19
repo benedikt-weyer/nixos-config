@@ -33,7 +33,7 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    (nerdfonts.override { fonts = [ "Hack" ]; })
+    (nerdfonts.override { fonts = [ "Hack" "GeistMono" "JetBrainsMono" ]; })
 
     gnomeExtensions.dash-to-dock
     gnomeExtensions.clipboard-indicator
@@ -132,6 +132,13 @@
         # vscodevim.vim
         # yzhang.markdown-all-in-one
       ];
+      userSettings = {
+        "editor.fontFamily" = "'JetBrainsMono NFM'";
+        "editor.fontSize" = 14;
+        "terminal.integrated.fontFamily" = "'GeistMono NFM'";
+        "terminal.integrated.fontSize" = 14;
+        "editor.fontLigatures" = true;
+      };
     };
 
     alacritty = {
@@ -145,15 +152,15 @@
         };
         font = {
           normal = {
-            family = "Hack Nerd Font";
+            family = "GeistMono NFM";
             style = "Regular";
           };
           bold = {
-            family = "Hack Nerd Font";
+            family = "GeistMono NFM";
             style = "Bold";
           };
           italic = {
-            family = "Hack Nerd Font";
+            family = "GeistMono NFM";
             style = "Italic";
           };
           size = 12;
@@ -344,4 +351,6 @@
     enable = true;
     pinentryPackage = pkgs.pinentry-gnome3;
   };
+
+  fonts.fontconfig.enable = true;
 }
