@@ -458,6 +458,10 @@
       "running-indicator-style"="DOTS";
     };
 
+    "org/gnome/shell/extensions/clipboard-indicator" = {
+      "toggle-menu" = "<Super>v";
+    };
+
     "org/gnome/desktop/wm/keybindings" = {
       close = ["<Super>x"];
       switch-to-workspace-left = ["<Super>Left"];
@@ -471,6 +475,7 @@
       toggle-tiled-right = [];
       move-to-side-e = [];
       move-to-side-w = [];
+      toggle-message-tray = [];
     };
 
     "org/gnome/desktop/input-sources" = {
