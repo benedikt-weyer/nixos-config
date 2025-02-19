@@ -106,7 +106,6 @@
     packages = with pkgs; [
       brave
       # alacritty
-      git
     ];
   };
 

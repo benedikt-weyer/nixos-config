@@ -112,10 +112,10 @@
 
       plugins = {
         lualine.enable = true;
-	telescope.enable = true;
-	oil.enable = true;
-	treesitter.enable = true;
-	luasnip.enable = true;
+        telescope.enable = true;
+        oil.enable = true;
+        treesitter.enable = true;
+        luasnip.enable = true;
       };
     };
 
@@ -218,6 +218,18 @@
         python.disabled = false;
       };
     };
+
+    gpg.enable = true;
+
+    git = {
+      enable = true;
+
+      extraConfig = {
+        commit.gpgsign = true;
+        gpg.format = "openpgp";
+        user.signingkey = "09E2C230A7CCCBF5";
+      };
+    };
   };
 
   dconf.settings = {
@@ -303,5 +315,11 @@
     "org/gnome/desktop/session" = {
       "idle-delay" = "uint32 0";
     };
+  };
+
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
 }
