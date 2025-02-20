@@ -76,6 +76,8 @@
     nixfmt-rfc-style
     obsidian
 
+    alacritty-theme
+
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
@@ -170,6 +172,7 @@
     alacritty = {
       enable = true;
       settings = {
+        general.import = [ ".nix-profile/catppuccin_macchiato.toml" ];
         terminal.shell = {
           program = "${pkgs.zsh}/bin/zsh";
         };
@@ -191,6 +194,7 @@
           };
           size = 12;
         };
+        mouse.hide_when_typing = false;
       };
     };
 
