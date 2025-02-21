@@ -40,6 +40,8 @@
     ];
   };
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   swapDevices = [
     { device = "/dev/disk/by-uuid/973be9cd-a792-4b79-bf19-25655eb29513"; }
   ];
