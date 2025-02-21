@@ -65,6 +65,10 @@
     dconf-editor
 
     direnv
+    nvtopPackages.nvidia
+    htop
+    sysprof
+    protonvpn-gui
     spotify
     filezilla
     xpipe
