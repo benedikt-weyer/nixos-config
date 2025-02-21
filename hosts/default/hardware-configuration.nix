@@ -40,7 +40,14 @@
     ];
   };
 
-  powerManagement.cpuFreqGovernor = "performance";
+  powerManagement = {
+    enable = true;
+    cpuFreqGovernor = "performance";
+    cpufreq = {
+      min = 800000;
+      max = 3000000;
+    };
+  };
 
   swapDevices = [
     { device = "/dev/disk/by-uuid/973be9cd-a792-4b79-bf19-25655eb29513"; }
