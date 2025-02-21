@@ -85,6 +85,27 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.printing.drivers = [
+    (pkgs.writeTextDir "share/cups/model/canonts7400.ppd" (
+      builtins.readFile ./printer-drivers/canonts7400.ppd
+    ))
+    pkgs.cnijfilter2
+  ];
+
+  hardware.printers = {
+    ensurePrinters = [
+      {
+        name = "TS7400-USB";
+        location = "Home";
+        deviceUri = "usb://Canon/TS7400%20series?serial=015DB2&interface=1";
+        model = "canonts7400.ppd";
+        ppdOptions = {
+          PageSize = "A4";
+        };
+      }
+    ];
+  };
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
