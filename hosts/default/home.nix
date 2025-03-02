@@ -66,7 +66,7 @@
     pnpm_10
     bun
     jdk
-postgresql_17
+    postgresql_17
 
     gnome-extension-manager
     dconf-editor
@@ -92,7 +92,7 @@ postgresql_17
 
     alacritty-theme
     wl-clipboard
-poppler_utils
+    poppler_utils
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -538,7 +538,7 @@ poppler_utils
     };
 
     "org/gnome/desktop/input-sources" = {
-      "xkb-options" = [ "lv3:caps_switch" ];
+      "xkb-options" = [ "lv3:caps_switch" "shift:both_shiftlock" ];
     };
 
     "org/gnome/desktop/wm/preferences" = {
