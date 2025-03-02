@@ -160,29 +160,48 @@ poppler_utils
 
     vscode = {
       enable = true;
-      extensions = with pkgs.vscode-extensions; [
-        dracula-theme.theme-dracula
-        # vscodevim.vim
-        # yzhang.markdown-all-in-one
-      ];
-      userSettings = {
-        "git.confirmSync" = false;
+      package = pkgs.vscode.fhs;
+      # extensions = with pkgs.vscode-marketplace; with pkgs.vscode-marketplace-release; [
+      #   vscjava.vscode-java-pack
+      #   redhat.java
+      #   vscjava.vscode-java-debug
+      #   vscjava.vscode-java-test
+      #   vscjava.vscode-maven
+      #   vscjava.vscode-java-dependency
+      #   vscjava.vscode-gradle
+      #   esbenp.prettier-vscode
+      #   github.copilot
+      #   github.copilot-chat
+      #   jnoortheen.nix-ide
+      #   brettm12345.nixfmt-vscode
+      #   mkhl.direnv
+      #   eamodio.gitlens
+      #   ms-azuretools.vscode-docker
+      #   albert.tabout
 
-        "editor.formatOnSave" = true;
-        "editor.wordWrap" = "on";
-        "editor.fontFamily" = "'JetBrainsMono NFM'";
-        "editor.fontSize" = 14;
-        "editor.fontLigatures" = true;
+      # ];
+      # userSettings = {
+      #   "git.confirmSync" = false;
 
-        "terminal.integrated.fontFamily" = "'GeistMono NFM'";
-        "terminal.integrated.fontSize" = 14;
-        "terminal.integrated.defaultProfile.linux" = "zsh";
-        "terminal.integrated.profiles.linux" = {
-          zsh = {
-            path = "${pkgs.zsh}/bin/zsh";
-          };
-        };
-      };
+      #   "[json]" = {
+      #     "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      #   };
+
+      #   "editor.formatOnSave" = true;
+      #   "editor.wordWrap" = "on";
+      #   "editor.fontFamily" = "'JetBrainsMono NFM'";
+      #   "editor.fontSize" = 14;
+      #   "editor.fontLigatures" = true;
+
+      #   "terminal.integrated.fontFamily" = "'GeistMono NFM'";
+      #   "terminal.integrated.fontSize" = 14;
+      #   "terminal.integrated.defaultProfile.linux" = "zsh";
+      #   "terminal.integrated.profiles.linux" = {
+      #     zsh = {
+      #       path = "${pkgs.zsh}/bin/zsh";
+      #     };
+      #   };
+      # };
     };
 
     alacritty = {
