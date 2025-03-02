@@ -60,6 +60,7 @@
     nodejs_22
     pnpm_10
     bun
+    jdk
 
     gnome-extension-manager
     dconf-editor
