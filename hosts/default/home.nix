@@ -61,6 +61,7 @@
     pnpm_10
     bun
     jdk
+postgresql_17
 
     gnome-extension-manager
     dconf-editor
