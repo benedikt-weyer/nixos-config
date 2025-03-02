@@ -468,6 +468,7 @@ poppler_utils
         alias.br = "branch";
         alias.ci = "commit";
         alias.st = "status";
+        alias.lg = "log --oneline --all --graph";
       };
     };
   };
