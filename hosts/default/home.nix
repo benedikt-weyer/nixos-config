@@ -260,7 +260,12 @@ poppler_utils
 
       shellAliases = {
         ll = "ls -l";
-        update = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+        update = "sudo nix flake update --flake /etc/nixos/";
+        rebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+        edit-home = "nvim /etc/nixos/default/home.nix";
+        edit-conf = "nvim /etc/nixos/default/configuration.nix";
+        edit-hconf = "nvim /etc/nixos/default/hardware-configuration.nix";
+        edit-flake = "nvim /etc/nixos/flake.nix";
         ff = "fastfetch";
         ls = "lsd -a";
       };
