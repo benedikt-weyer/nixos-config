@@ -68,6 +68,7 @@ postgresql_17
     desktop-file-utils
     gnome-tweaks
 
+    insomnia
     direnv
     nvtopPackages.nvidia
     htop
