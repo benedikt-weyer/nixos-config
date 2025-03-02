@@ -45,7 +45,7 @@
     cpuFreqGovernor = "performance";
     cpufreq = {
       min = 800000;
-      max = 3000000;
+      max = 2700000;
     };
   };
 
