@@ -65,6 +65,7 @@ postgresql_17
 
     gnome-extension-manager
     dconf-editor
+    desktop-file-utils
 
     direnv
     nvtopPackages.nvidia
