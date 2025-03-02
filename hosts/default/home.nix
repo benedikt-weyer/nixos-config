@@ -12,7 +12,12 @@
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [
+      inputs.nix-vscode-extensions.overlays.default
+    ];
+  };
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
