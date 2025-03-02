@@ -106,6 +106,8 @@
     ];
   };
 
+  hardware.sane.enable = true; # enables support for SANE scanners
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -176,6 +178,8 @@
       "networkmanager"
       "wheel"
       "docker"
+      "scanner" 
+      "lp" 
     ];
     packages = with pkgs; [
       brave
