@@ -10,6 +10,8 @@
   imports = [
     # For home-manager
     inputs.nixvim.homeManagerModules.nixvim
+
+    ./programs/firefox.nix
   ];
 
   nixpkgs = {
