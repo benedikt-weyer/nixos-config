@@ -563,6 +563,8 @@
     "org/gnome/desktop/wm/preferences" = {
       "focus-mode" = "sloppy";
       "button-layout" = "appmenu:minimize,maximize,close";
+      "num-workspaces" = 7;
+      "workspace-names" = [ "Time & Task planning" ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
