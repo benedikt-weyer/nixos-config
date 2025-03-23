@@ -67,11 +67,28 @@
     bun
     jdk
     postgresql_17
+    php
+    php82Packages.composer
+    gcc
+    nvidia-container-toolkit
 
     gnome-extension-manager
     dconf-editor
     desktop-file-utils
     gnome-tweaks
+    ffmpeg
+    mesa
+    mesa-demos
+    freeglut
+    vlc
+    xournalpp
+    gdmap
+
+    shotcut
+    obs-studio
+
+    ledger-live-desktop
+    ausweisapp    
 
     insomnia
     direnv
@@ -93,6 +110,8 @@
     alacritty-theme
     wl-clipboard
     poppler_utils
+    
+    anki
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
