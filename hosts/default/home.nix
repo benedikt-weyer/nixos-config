@@ -92,6 +92,7 @@
     vlc
     xournalpp
     gdmap
+    zip
 
     shotcut
     obs-studio
