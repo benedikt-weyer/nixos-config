@@ -80,6 +80,7 @@
     php82Packages.composer
     gcc
     nvidia-container-toolkit
+    symfony-cli
 
     gnome-extension-manager
     dconf-editor
@@ -96,6 +97,8 @@
 
     shotcut
     obs-studio
+
+    rustdesk
 
     ledger-live-desktop
     ausweisapp    
@@ -122,7 +125,7 @@
     poppler_utils
     
     anki
-
+    
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
