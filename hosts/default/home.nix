@@ -81,6 +81,8 @@
     gcc
     nvidia-container-toolkit
     symfony-cli
+    prisma
+    prisma-engines
 
     gnome-extension-manager
     dconf-editor
