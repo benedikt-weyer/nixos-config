@@ -79,7 +79,6 @@
     php
     php82Packages.composer
     gcc
-    nvidia-container-toolkit
     symfony-cli
     prisma
     prisma-engines
@@ -107,7 +106,6 @@
 
     insomnia
     direnv
-    nvtopPackages.nvidia
     htop
     sysprof
     protonvpn-gui
