@@ -29,12 +29,17 @@
 
       shellAliases = {
         ll = "ls -l";
-        update = "sudo nix flake update --flake /etc/nixos/";
-        rebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
-        edit-home = "nvim /etc/nixos/default/home.nix";
-        edit-conf = "nvim /etc/nixos/default/configuration.nix";
-        edit-hconf = "nvim /etc/nixos/default/hardware-configuration.nix";
-        edit-flake = "nvim /etc/nixos/flake.nix";
+        
+	update-etc = "sudo nix flake update --flake /etc/nixos/";
+        rebuild-etc = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+	update = "sudo nix flake update --flake ~/nixos-config";
+	rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config/#default";
+	rebuild-laptop = "sudo nixos-rebuild switch --flake ~/nixos-config/#laptop";
+
+	edit-home-etc = "nvim /etc/nixos/default/home.nix";
+        edit-conf-etc = "nvim /etc/nixos/default/configuration.nix";
+        edit-hconf-etc = "nvim /etc/nixos/default/hardware-configuration.nix";
+        edit-flake-etc = "nvim /etc/nixos/flake.nix";
         ff = "fastfetch";
         ls = "lsd -a";
       };
