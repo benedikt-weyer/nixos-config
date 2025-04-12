@@ -11,14 +11,14 @@
     # For home-manager
     inputs.nixvim.homeManagerModules.nixvim
 
-    ./programs/firefox.nix
-    ./programs/starship.nix
-    ./programs/alacritty.nix
-    ./programs/zsh.nix
-    ./programs/vscode.nix
-    ./programs/nixvim.nix
-    ./programs/git.nix
-    ./programs/fzf.nix
+    ./../../modules/home-manager/programs/firefox.nix
+    ./../../modules/home-manager/programs/starship.nix
+    ./../../modules/home-manager/programs/alacritty.nix
+    ./../../modules/home-manager/programs/zsh.nix
+    ./../../modules/home-manager/programs/vscode.nix
+    ./../../modules/home-manager/programs/nixvim.nix
+    ./../../modules/home-manager/programs/git.nix
+    ./../../modules/home-manager/programs/fzf.nix
   ];
 
   nixpkgs = {
