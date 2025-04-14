@@ -33,7 +33,7 @@
 
     #  inputs.nixvim.homeManagerModules.nixvim
 
-    ./prisma.nix
+    ./custom-packages/prisma-engines.nix
   ];
 
   # Bootloader.
@@ -192,8 +192,6 @@
 
     pcsclite
     pcsc-tools
-
-    (import ./prisma.nix)
   ];
 
   services.pcscd.enable = true;

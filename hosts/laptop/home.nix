@@ -131,9 +131,6 @@
     poppler_utils
     
     anki
-
-    unstable.prisma
-    unstable.prisma-engines
     
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your

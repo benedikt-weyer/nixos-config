@@ -69,11 +69,6 @@ rustPlatform.buildRustPackage rec {
     license = licenses.asl20;
     platforms = platforms.unix;
     mainProgram = "prisma";
-    maintainers = with maintainers; [
-      pimeys
-      tomhoule
-      aqrln
-    ];
   };
 }
 
