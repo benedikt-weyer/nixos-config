@@ -1,43 +1,40 @@
 {
-  fetchFromGitHub,
+  pkgs,
   lib,
-  openssl,
-  pkg-config,
-  protobuf,
-  rustPlatform,
-  stdenv,
 }:
 
 # Updating this package will force an update for prisma. The
 # version of prisma-engines and prisma must be the same for them to
 # function correctly.
-rustPlatform.buildRustPackage rec {
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "prisma-engines";
   version = "6.6.0";
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "prisma";
     repo = "prisma-engines";
     rev = version;
-    hash = "sha256-gQLDskabTaNk19BJi9Kv4TiEfVck2QZ7xdhopt5KH6M=";
+    hash = "sha256-moonBNNGWECGPvhyyeHKKAQRXj5lNP0k99JB+1POMUE=";
   };
 
   useFetchCargoVendor = true;
-  cargoHash = "sha256-GLOGivOH8psE5/M5kYakh9Cab4Xe5Q8isY1c6YDyAB8=";
+  cargoHash = "sha256-BiSo3BgVxiPAfSIPUv0SqH+XgU1Vh4wws0set4cLzDU=";
 
   # Use system openssl.
   OPENSSL_NO_VENDOR = 1;
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [ pkgs.pkg-config ];
 
-  buildInputs = [ openssl ];
+  buildInputs = [ pkgs.openssl ];
+
+  buildFeatures = [ "edition2024" ];
 
   preBuild = ''
-    export OPENSSL_DIR=${lib.getDev openssl}
-    export OPENSSL_LIB_DIR=${lib.getLib openssl}/lib
+    export OPENSSL_DIR=${lib.getDev pkgs.openssl}
+    export OPENSSL_LIB_DIR=${lib.getLib pkgs.openssl}/lib
 
-    export PROTOC=${protobuf}/bin/protoc
-    export PROTOC_INCLUDE="${protobuf}/include";
+    export PROTOC=${pkgs.protobuf}/bin/protoc
+    export PROTOC_INCLUDE="${pkgs.protobuf}/include";
 
     export SQLITE_MAX_VARIABLE_NUMBER=250000
     export SQLITE_MAX_EXPR_DEPTH=10000
@@ -57,7 +54,7 @@ rustPlatform.buildRustPackage rec {
   ];
 
   postInstall = ''
-    mv $out/lib/libquery_engine${stdenv.hostPlatform.extensions.sharedLibrary} $out/lib/libquery_engine.node
+    mv $out/lib/libquery_engine${pkgs.stdenv.hostPlatform.extensions.sharedLibrary} $out/lib/libquery_engine.node
   '';
 
   # Tests are long to compile
