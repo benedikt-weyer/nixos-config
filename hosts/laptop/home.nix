@@ -25,6 +25,13 @@
     config.allowUnfree = true;
     overlays = [
       inputs.nix-vscode-extensions.overlays.default
+
+      ( final: _prev: {
+        unstable = import inputs.nixpkgs-unstable {
+          system = final.system;
+          config.allowUnfree = true;
+        };
+      })
     ];
   };
 
@@ -80,8 +87,7 @@
     php82Packages.composer
     gcc
     symfony-cli
-    prisma
-    prisma-engines
+ 
 
     gnome-extension-manager
     dconf-editor
@@ -125,6 +131,9 @@
     poppler_utils
     
     anki
+
+    unstable.prisma
+    unstable.prisma-engines
     
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
