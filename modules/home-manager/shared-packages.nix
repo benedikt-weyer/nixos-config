@@ -5,14 +5,6 @@
 }:
 {
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-    #  pkgs.nodePackages.graphql-language-service-cli
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
     (nerdfonts.override {
       fonts = [
         "Hack"
@@ -85,12 +77,9 @@
     
     anki
     
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
-
+    android-tools
+    android-udev-rules
+    libarchive
+    usbutils
   ];
 }
