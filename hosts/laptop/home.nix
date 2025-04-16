@@ -64,6 +64,11 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".ssh/config_source" = {
+        source = ../../modules/config-files/ssh-config;
+        onChange = "cat ~/.ssh/config_source > ~/.ssh/config && chmod 600 ~/.ssh/config";
+    };
   };
 
   # Home Manager can also manage your environment variables through
