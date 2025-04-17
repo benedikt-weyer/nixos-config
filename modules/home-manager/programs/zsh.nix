@@ -30,11 +30,10 @@
       shellAliases = {
         ll = "ls -l";
         
-	update-etc = "sudo nix flake update --flake /etc/nixos/";
+        update-etc = "sudo nix flake update --flake /etc/nixos/";
+        update = "sudo nix flake update --flake ~/nixos-config";
         rebuild-etc = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
-	update = "sudo nix flake update --flake ~/nixos-config";
-	rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config/#default";
-	rebuild-laptop = "sudo nixos-rebuild switch --flake ~/nixos-config/#laptop";
+        rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config/#default";
 
 	edit-home-etc = "nvim /etc/nixos/default/home.nix";
         edit-conf-etc = "nvim /etc/nixos/default/configuration.nix";
