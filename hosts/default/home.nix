@@ -19,6 +19,8 @@
     ./../../modules/home-manager/programs/nixvim.nix
     ./../../modules/home-manager/programs/git.nix
     ./../../modules/home-manager/programs/fzf.nix
+
+    ./../../modules/home-manager/shared-packages.nix
   ];
 
   nixpkgs = {
