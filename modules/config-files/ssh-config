@@ -6,7 +6,7 @@ Host *
 Host git.haw-hamburg.de-wem133
     HostName git.haw-hamburg.de
     User git
-    IdentityFile ~/.ssh/id_ed25519_haw
+    IdentityFile ~/.ssh/id_ed25519_gitlab_haw
 
 # github personal
 Host github.com-benedikt-weyer
