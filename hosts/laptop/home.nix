@@ -58,7 +58,7 @@
   programs.zsh.shellAliases = {
       rebuild-etc = "sudo nixos-rebuild switch --flake /etc/nixos/#laptop";
       rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config/#laptop";
-  }
+  };
 
   dconf.settings = {
     "org/gnome/shell" = {
