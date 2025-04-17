@@ -20,6 +20,8 @@
     ./../../modules/home-manager/programs/fzf.nix
 
     ./../../modules/home-manager/shared-packages.nix
+
+    ./../../modules/home-manager/shared-files.nix
   ];
 
   nixpkgs = {
@@ -37,10 +39,6 @@
   home.packages = with pkgs; [
     nvtopPackages.nvidia
   ];
-
-  home.file = {
-    
-  };
 
   home.sessionVariables = {
     SHELL = "${pkgs.zsh}/bin/zsh";

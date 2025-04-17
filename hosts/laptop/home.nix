@@ -21,6 +21,8 @@
     ./../../modules/home-manager/programs/fzf.nix
 
     ./../../modules/home-manager/shared-packages.nix
+
+    ./../../modules/home-manager/shared-files.nix
   ];
 
   nixpkgs = {
@@ -41,13 +43,6 @@
   home.homeDirectory = "/home/benedikt";
 
   home.stateVersion = "24.11";
-
-  home.file = {
-    ".ssh/config_source" = {
-        source = ../../modules/config-files/ssh-config;
-        onChange = "cat ~/.ssh/config_source > ~/.ssh/config && chmod 600 ~/.ssh/config";
-    };
-  };
 
   home.sessionVariables = {
     # EDITOR = "emacs";
