@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   inputs,
   lib,
   ...
@@ -154,7 +155,10 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { 
+      inherit inputs; 
+      inherit pkgs-unstable;
+    };
     users = {
       "benedikt" = import ./home.nix;
     };
