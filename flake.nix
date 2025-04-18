@@ -37,7 +37,11 @@
     {
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = { 
+            inherit inputs; 
+            pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+            pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+          };
           modules = [
             ./hosts/default/configuration.nix
             inputs.home-manager.nixosModules.default
@@ -45,7 +49,11 @@
         };
 
         laptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = { 
+            inherit inputs; 
+            pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+            pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+          };
           modules = [
             ./hosts/laptop/configuration.nix
             inputs.home-manager.nixosModules.default
