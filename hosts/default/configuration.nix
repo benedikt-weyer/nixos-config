@@ -12,6 +12,8 @@
     ./hardware-configuration.nix
 
     inputs.home-manager.nixosModules.default
+
+    ./../../modules/custom-packages/prisma-engines.nix
   ];
 
   # Bootloader.
