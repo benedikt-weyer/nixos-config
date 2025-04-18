@@ -17,7 +17,7 @@
 
     #  inputs.nixvim.homeManagerModules.nixvim
 
-    ./custom-packages/prisma-engines.nix
+    ./../../modules/custom-packages/prisma-engines.nix
   ];
 
   # Bootloader.
