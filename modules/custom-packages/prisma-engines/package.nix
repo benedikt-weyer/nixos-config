@@ -1,12 +1,13 @@
 {
   pkgs,
-  lib,
+  pkgs-unstable,
+  lib
 }:
 
 # Updating this package will force an update for prisma. The
 # version of prisma-engines and prisma must be the same for them to
 # function correctly.
-pkgs.rustPlatform.buildRustPackage rec {
+pkgs-unstable.rustPlatform.buildRustPackage rec {
   pname = "prisma-engines";
   version = "6.6.0";
 
@@ -26,8 +27,6 @@ pkgs.rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [ pkgs.pkg-config ];
 
   buildInputs = [ pkgs.openssl ];
-
-  buildFeatures = [ "edition2024" ];
 
   preBuild = ''
     export OPENSSL_DIR=${lib.getDev pkgs.openssl}
