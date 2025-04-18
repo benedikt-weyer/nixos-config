@@ -61,7 +61,7 @@
 
   services.printing.drivers = [
     (pkgs.writeTextDir "share/cups/model/canonts7400.ppd" (
-      builtins.readFile ./printer-drivers/canonts7400.ppd
+      builtins.readFile ./../../modules/printer-drivers/canonts7400.ppd
     ))
     pkgs.cnijfilter2
   ];
