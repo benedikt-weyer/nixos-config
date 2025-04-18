@@ -2,6 +2,7 @@
   config,
   pkgs,
   pkgs-unstable,
+  pkgs-custom,
   inputs,
   lib,
   ...
@@ -12,8 +13,6 @@
     ./hardware-configuration.nix
 
     inputs.home-manager.nixosModules.default
-
-    ./../../modules/custom-packages/prisma-engines.nix
   ];
 
   # Bootloader.
@@ -160,6 +159,7 @@
     extraSpecialArgs = { 
       inherit inputs; 
       inherit pkgs-unstable;
+      inherit pkgs-custom;
     };
     users = {
       "benedikt" = import ./home.nix;
