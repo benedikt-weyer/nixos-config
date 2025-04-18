@@ -37,10 +37,16 @@
     {
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
-          specialArgs = { 
+          specialArgs = rec {
             inherit inputs; 
             pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
             pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+            pkgs-custom = {
+	            prisma-engines-up-to-date = pkgs.callPackage ./modules/custom-packages/prisma-engines/package.nix { 
+                inherit pkgs pkgs-unstable; 
+                lib = nixpkgs.lib;
+              };
+            };
           };
           modules = [
             ./hosts/default/configuration.nix
@@ -49,10 +55,16 @@
         };
 
         laptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { 
+          specialArgs = rec {
             inherit inputs; 
             pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
             pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+            pkgs-custom = {
+	            prisma-engines-up-to-date = pkgs.callPackage ./modules/custom-packages/prisma-engines/package.nix { 
+                inherit pkgs pkgs-unstable; 
+                lib = nixpkgs.lib;
+              };
+            };
           };
           modules = [
             ./hosts/laptop/configuration.nix
