@@ -2,8 +2,10 @@
   config,
   pkgs,
   pkgs-unstable,
+  pkgs-custom,
   ...
 }:
+
 {
   home.packages = with pkgs; [
     (nerdfonts.override {
@@ -82,5 +84,7 @@
     android-udev-rules
     libarchive
     usbutils
+
+    pkgs-custom.prisma-engines-up-to-date
   ];
 }
