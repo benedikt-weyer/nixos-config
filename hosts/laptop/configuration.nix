@@ -8,14 +8,9 @@
 
 {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    # For NixOS
-    #inputs.nixvim.nixosModules.nixvim
 
     inputs.home-manager.nixosModules.default
-
-    #  inputs.nixvim.homeManagerModules.nixvim
 
     ./../../modules/custom-packages/prisma-engines.nix
   ];
