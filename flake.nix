@@ -32,8 +32,6 @@
       self,
       nixpkgs,
       nixpkgs-unstable,
-      nixvim,
-      nix-vscode-extensions,
       ...
     }@inputs:
     {
