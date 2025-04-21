@@ -1,10 +1,15 @@
-{ config, pkgs, ... }:
+{ 
+  config, 
+  pkgs,
+  pkgs-unstable,
+  ... 
+}:
 
 {
   programs = {
     vscode = {
       enable = true;
-      package = pkgs.vscode.fhs;
+      package = pkgs-unstable.vscode.fhs;
       # extensions = with pkgs.vscode-marketplace; with pkgs.vscode-marketplace-release; [
       #   vscjava.vscode-java-pack
       #   redhat.java
