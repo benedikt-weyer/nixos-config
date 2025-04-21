@@ -8,6 +8,8 @@
 
 {
   home.packages = with pkgs; [
+    pkgs-unstable.brave
+
     (nerdfonts.override {
       fonts = [
         "Hack"

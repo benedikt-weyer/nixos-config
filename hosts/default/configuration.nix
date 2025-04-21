@@ -149,10 +149,6 @@
       "scanner" 
       "lp" 
     ];
-    packages = with pkgs; [
-      brave
-      # alacritty
-    ];
   };
 
   home-manager = {
