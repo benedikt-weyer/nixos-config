@@ -40,7 +40,7 @@
           specialArgs = rec {
             inherit inputs; 
             pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
-            pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+            pkgs-unstable = import nixpkgs-unstable { system = "x86_64-linux"; config.allowUnfree = true; };
             pkgs-custom = {
 	            prisma-engines-up-to-date = pkgs.callPackage ./modules/custom-packages/prisma-engines/package.nix { 
                 inherit pkgs pkgs-unstable; 
@@ -58,7 +58,7 @@
           specialArgs = rec {
             inherit inputs; 
             pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
-            pkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+            pkgs-unstable = import nixpkgs-unstable { system = "x86_64-linux"; config.allowUnfree = true; };
             pkgs-custom = {
 	            prisma-engines-up-to-date = pkgs.callPackage ./modules/custom-packages/prisma-engines/package.nix { 
                 inherit pkgs pkgs-unstable; 
