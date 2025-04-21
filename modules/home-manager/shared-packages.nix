@@ -56,7 +56,7 @@
     rustdesk
 
     ledger-live-desktop
-    ausweisapp    
+    pkgs-unstable.ausweisapp    
 
     insomnia
     direnv
@@ -67,7 +67,7 @@
     filezilla
     xpipe
     libreoffice
-    bitwig-studio
+    pkgs-unstable.bitwig-studio
     fastfetch
     lsd
     eduvpn-client
