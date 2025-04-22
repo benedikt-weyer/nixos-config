@@ -23,6 +23,15 @@
         alias.st = "status";
         alias.lg = "log --oneline --all --graph";
       };
+
+      includes = [
+        {
+          condition = "hasconfig:remote.*.url:*@git.haw-hamburg.de*";
+          contents = {
+            user.email = "benedikt.weyer@haw-hamburg.de";
+          };
+        }
+      ];
     };
     
   };
