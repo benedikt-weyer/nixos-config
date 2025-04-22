@@ -22,16 +22,22 @@
         alias.ci = "commit";
         alias.st = "status";
         alias.lg = "log --oneline --all --graph";
+
+        core = {
+          sshCommand = "ssh -i ~/.ssh/id_ed25519_github_personal";
+        };
       };
 
-      includes = [
-        {
-          condition = "hasconfig:remote.*.url:*@git.haw-hamburg.de*";
-          contents = {
-            user.email = "benedikt.weyer@haw-hamburg.de";
+      includes = [{
+        condition = "hasconfig:remote.*.url:git@git.haw-hamburg.de*";
+        contents = {
+          user.email = "benedikt.weyer@haw-hamburg.de";
+
+          core = {
+            sshCommand = "ssh -i ~/.ssh/id_ed25519_gitlab_haw";
           };
-        }
-      ];
+        };
+      }];
     };
     
   };
