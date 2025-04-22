@@ -1,3 +1,15 @@
 Host *
     AddKeysToAgent yes
     IdentitiesOnly yes
+
+# haw
+Host git.haw-hamburg.de
+    HostName git.haw-hamburg.de
+    User git
+    IdentityFile ~/.ssh/id_ed25519_gitlab_haw
+
+# github personal
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_github_personal
