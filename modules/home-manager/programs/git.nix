@@ -29,9 +29,13 @@
       };
 
       includes = [{
-        condition = "hasconfig:remote.*.url:git@git.haw-hamburg.de*";
+        condition = "hasconfig:remote.*.url:git@git.haw-hamburg.de:*/**";
         contents = {
           user.email = "benedikt.weyer@haw-hamburg.de";
+
+          gpg.format = "ssh";
+          user.signingkey = "~/.ssh/id_ed25519_gitlab_haw.pub";
+          commit.gpgsign = true;
 
           core = {
             sshCommand = "ssh -i ~/.ssh/id_ed25519_gitlab_haw";
