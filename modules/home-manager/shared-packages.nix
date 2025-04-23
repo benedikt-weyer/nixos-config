@@ -55,7 +55,7 @@
     shotcut
     obs-studio
 
-    rustdesk
+    pkgs-unstable.rustdesk-flutter
 
     ledger-live-desktop
     pkgs-unstable.ausweisapp    
