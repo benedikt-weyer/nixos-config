@@ -90,5 +90,7 @@
     pkgs-custom.prisma-engines-up-to-date
 
     drawio
+
+    pkgs-unstable.trivy
   ];
 }
