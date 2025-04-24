@@ -39,8 +39,17 @@
         default = nixpkgs.lib.nixosSystem {
           specialArgs = rec {
             inherit inputs; 
-            pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
-            pkgs-unstable = import nixpkgs-unstable { system = "x86_64-linux"; config.allowUnfree = true; };
+
+            pkgs = import nixpkgs { 
+              system = "x86_64-linux"; 
+              config.allowUnfree = true;
+            };
+
+            pkgs-unstable = import nixpkgs-unstable { 
+              system = "x86_64-linux"; 
+              config.allowUnfree = true; 
+            };
+
             pkgs-custom = {
 	            prisma-engines-up-to-date = pkgs.callPackage ./modules/custom-packages/prisma-engines/package.nix { 
                 inherit pkgs pkgs-unstable; 
