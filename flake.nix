@@ -38,7 +38,7 @@
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
           specialArgs = rec {
-            inherit inputs; 
+            inherit inputs;
 
             pkgs = import nixpkgs { 
               system = "x86_64-linux"; 
@@ -65,7 +65,7 @@
 
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = rec {
-            inherit inputs; 
+            inherit inputs;
 
             pkgs = import nixpkgs { 
               system = "x86_64-linux"; 
