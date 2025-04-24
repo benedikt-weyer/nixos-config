@@ -146,11 +146,17 @@
 
     pcsclite
     pcsc-tools
+
+    fprintd
   ];
+
+
+  services.fprintd.enable = true;
 
   services.pcscd.enable = true;
 
   system.stateVersion = "24.11";
+  
 
   nix.settings.experimental-features = [
     "nix-command"
