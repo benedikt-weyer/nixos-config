@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   lib,
   inputs,
   ...
@@ -43,6 +44,10 @@
     # EDITOR = "emacs";
     SHELL = "${pkgs.zsh}/bin/zsh";
   };
+
+  home.packages = with pkgs; [
+    pkgs-unstable.easyroam-connect-desktop
+  ];
 
   programs.home-manager.enable = true;
 
