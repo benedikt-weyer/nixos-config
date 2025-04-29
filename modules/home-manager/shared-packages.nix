@@ -72,7 +72,7 @@
     pkgs-unstable.bitwig-studio
     fastfetch
     lsd
-    eduvpn-client
+    pkgs-unstable.eduvpn-client
     nixfmt-rfc-style
     obsidian
 
