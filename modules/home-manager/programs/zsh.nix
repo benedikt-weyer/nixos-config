@@ -2,6 +2,7 @@
   config, 
   pkgs,
   pkgs-custom,
+  pkgs-unstable,
   ... 
 }:
 
@@ -42,12 +43,12 @@
         ls = "lsd -a";
       };
 
-      initExtra = with pkgs-custom; ''
-        export PRISMA_SCHEMA_ENGINE_BINARY="${prisma-engines-up-to-date}/bin/schema-engine"
-        export PRISMA_QUERY_ENGINE_BINARY="${prisma-engines-up-to-date}/bin/query-engine"
-        export PRISMA_QUERY_ENGINE_LIBRARY="${prisma-engines-up-to-date}/lib/libquery_engine.node"
-        export PRISMA_INTROSPECTION_ENGINE_BINARY="${prisma-engines-up-to-date}/bin/introspection-engine"
-        export PRISMA_FMT_BINARY="${prisma-engines-up-to-date}/bin/prisma-fmt"
+      initExtra = with pkgs-unstable; ''
+        export PRISMA_SCHEMA_ENGINE_BINARY="${prisma-engines}/bin/schema-engine"
+        export PRISMA_QUERY_ENGINE_BINARY="${prisma-engines}/bin/query-engine"
+        export PRISMA_QUERY_ENGINE_LIBRARY="${prisma-engines}/lib/libquery_engine.node"
+        export PRISMA_INTROSPECTION_ENGINE_BINARY="${prisma-engines}/bin/introspection-engine"
+        export PRISMA_FMT_BINARY="${prisma-engines}/bin/prisma-fmt"
       '';
     };
     

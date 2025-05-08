@@ -88,7 +88,7 @@
     libarchive
     usbutils
 
-    pkgs-custom.prisma-engines-up-to-date
+    pkgs-unstable.prisma-engines
 
     drawio
 
