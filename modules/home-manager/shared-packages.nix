@@ -64,11 +64,11 @@
     direnv
     htop
     sysprof
-    protonvpn-gui
-    spotify
+    pkgs-unstable.protonvpn-gui
+    pkgs-unstable.spotify
     pkgs-unstable.tidal-hifi
     filezilla
-    xpipe
+    pkgs-unstable.xpipe
     libreoffice
     pkgs-unstable.bitwig-studio
     fastfetch
