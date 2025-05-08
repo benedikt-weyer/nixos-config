@@ -66,7 +66,7 @@
     sysprof
     pkgs-unstable.protonvpn-gui
     pkgs-unstable.spotify
-    pkgs-unstable.tidal-hifi
+    tidal-hifi
     filezilla
     pkgs-unstable.xpipe
     libreoffice
