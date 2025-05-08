@@ -66,6 +66,7 @@
     sysprof
     protonvpn-gui
     spotify
+    pkgs-unstable.tidal-hifi
     filezilla
     xpipe
     libreoffice
