@@ -11,7 +11,7 @@
         user.signingkey = "09E2C230A7CCCBF5";
         user.name = "Benedikt Weyer";
         user.email = "bw.development@pm.me";
-        pull.rebase = true;
+        pull.rebase = false;
         core.editor = "code --wait";
         core.autocrlf = "input";
         init.defaultBranch = "main";
