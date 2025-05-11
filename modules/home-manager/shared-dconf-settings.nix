@@ -53,7 +53,9 @@
     };
 
     "org/gnome/shell/extensions/pano" = {
-      "global-shortcut" = "<Super>v";
+      "global-shortcut" = [ "<Super>v" ];
+      "play-audio-on-copy" = false;
+      "send-notification-on-copy" = false;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
