@@ -13,7 +13,6 @@
       disable-user-extensions = false;
       enabled-extensions = [
         "dash-to-dock@micxgx.gmail.com"
-        "clipboard-indicator@tudmotu.com"
         "nightthemeswitcher@romainvigier.fr"
         "pop-shell@system76.com"
         "notification-timeout@codito.github.com"
@@ -52,10 +51,6 @@
       "running-indicator-style" = "DOTS";
     };
 
-    "org/gnome/shell/extensions/clipboard-indicator" = {
-      "toggle-menu" = "<Super>v";
-    };
-
     "org/gnome/desktop/wm/keybindings" = {
       close = [ "<Super>x" ];
       switch-to-workspace-left = [ "<Super>Left" ];
@@ -85,9 +80,10 @@
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       "custom-keybindings" = [
-        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
-        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
       ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -104,6 +100,11 @@
       "binding" = "<Super>b";
       "command" = "brave";
       "name" = "Open Browser";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+      "binding" = "<Super>v";
+      "command" = "diodon";
+      "name" = "Open Diodon Clipboard";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {

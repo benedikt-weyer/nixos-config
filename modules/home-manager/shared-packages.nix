@@ -20,7 +20,6 @@
     roboto
 
     gnomeExtensions.dash-to-dock
-    gnomeExtensions.clipboard-indicator
     gnomeExtensions.night-theme-switcher
     gnomeExtensions.pop-shell
     gnomeExtensions.notification-timeout
@@ -93,5 +92,8 @@
     drawio
 
     pkgs-unstable.trivy
+
+    pkgs-unstable.diodon
+    zeitgeist
   ];
 }
