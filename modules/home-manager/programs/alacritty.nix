@@ -27,6 +27,13 @@
           };
           size = 12;
         };
+        keyboard.bindings = [
+          {
+            key = "V";
+            mods = "Control";
+            action = "Paste";
+          }
+        ];
         mouse.hide_when_typing = false;
       };
     };
