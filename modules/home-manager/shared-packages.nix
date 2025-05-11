@@ -25,6 +25,7 @@
     gnomeExtensions.notification-timeout
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.mouse-follows-focus-2
+    gnomeExtensions.pano
     gnome-pomodoro
 
     nodejs_22
@@ -93,7 +94,5 @@
 
     pkgs-unstable.trivy
 
-    pkgs-unstable.diodon
-    zeitgeist
   ];
 }

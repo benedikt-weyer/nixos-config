@@ -19,6 +19,7 @@
         "tray-icons-reloaded@selfmade.pl"
         "pomodoro@arun.codito.in"
         "mouse-follows-focus@crisidev.org"
+        "pano@elhan.io"
       ];
     };
 
@@ -49,6 +50,10 @@
       "custom-theme-shrink" = true;
       "custom-theme-running-dots" = true;
       "running-indicator-style" = "DOTS";
+    };
+
+    "org/gnome/shell/extensions/pano" = {
+      "global-shortcut" = "<Super>v";
     };
 
     "org/gnome/desktop/wm/keybindings" = {
@@ -83,7 +88,6 @@
       "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
       "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
       "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
-      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
       ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -100,11 +104,6 @@
       "binding" = "<Super>b";
       "command" = "brave";
       "name" = "Open Browser";
-    };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
-      "binding" = "<Super>v";
-      "command" = "diodon";
-      "name" = "Open Diodon Clipboard";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
