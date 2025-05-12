@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }:
 {
@@ -85,11 +86,17 @@
       "workspace-names" = [ "Time & Task planning" ];
     };
 
+    "org/gnome/shell/keybindings" = {
+      "focus-active-notification" = [];
+    };
+
     "org/gnome/settings-daemon/plugins/media-keys" = {
       "custom-keybindings" = [
-      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
-      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
       ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -107,6 +114,12 @@
       "command" = "brave";
       "name" = "Open Browser";
     };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+      "binding" = "<Super>n";
+      "command" = "code --folder-uri=file://${config.home.homeDirectory}/nixos-config";
+      "name" = "Edit NixOS Config";
+    };
+
 
     "org/gnome/settings-daemon/plugins/power" = {
       "sleep-inactive-ac-timeout" = 0;
