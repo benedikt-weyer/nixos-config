@@ -10,13 +10,9 @@
   home.packages = with pkgs; [
     pkgs-unstable.brave
 
-    (nerdfonts.override {
-      fonts = [
-        "Hack"
-        "GeistMono"
-        "JetBrainsMono"
-      ];
-    })
+    nerd-fonts.hack
+    nerd-fonts.geist-mono
+    nerd-fonts.jetbrains-mono
     roboto
 
     gnomeExtensions.dash-to-dock
