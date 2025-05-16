@@ -66,7 +66,7 @@
     tidal-hifi
     filezilla
     pkgs-unstable.xpipe
-    libreoffice
+    pkgs-unstable.libreoffice-qt6-fresh
     pkgs-unstable.bitwig-studio
     fastfetch
     lsd
