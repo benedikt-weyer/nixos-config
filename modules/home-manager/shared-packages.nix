@@ -37,6 +37,7 @@
     php82Packages.composer
     gcc
     symfony-cli
+    pkgs-unstable.supabase-cli
  
 
     gnome-extension-manager
