@@ -11,12 +11,12 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
+      url = "github:nix-community/nixvim/main";
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
