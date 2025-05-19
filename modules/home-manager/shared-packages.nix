@@ -91,5 +91,9 @@
 
     pkgs-unstable.trivy
 
+    pkgs-unstable.windsurf
+    pkgs-unstable.code-cursor
+    
+
   ];
 }
