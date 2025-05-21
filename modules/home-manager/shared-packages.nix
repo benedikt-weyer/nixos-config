@@ -97,5 +97,6 @@
     unigine-heaven
     unigine-valley
     unigine-superposition
+    geekbench
   ];
 }
