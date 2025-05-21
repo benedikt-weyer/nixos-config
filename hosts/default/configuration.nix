@@ -24,6 +24,11 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  networking.firewall = {
+    enable = true;
+    interfaces.enp5s0.allowedTCPPorts = [ 3000 ]; # Replace 8080 with the desired port
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
