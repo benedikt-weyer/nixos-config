@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }:
 {
@@ -13,13 +14,13 @@
       disable-user-extensions = false;
       enabled-extensions = [
         "dash-to-dock@micxgx.gmail.com"
-        "clipboard-indicator@tudmotu.com"
         "nightthemeswitcher@romainvigier.fr"
         "pop-shell@system76.com"
         "notification-timeout@codito.github.com"
         "tray-icons-reloaded@selfmade.pl"
         "pomodoro@arun.codito.in"
         "mouse-follows-focus@crisidev.org"
+        "pano@elhan.io"
       ];
     };
 
@@ -52,8 +53,10 @@
       "running-indicator-style" = "DOTS";
     };
 
-    "org/gnome/shell/extensions/clipboard-indicator" = {
-      "toggle-menu" = "<Super>v";
+    "org/gnome/shell/extensions/pano" = {
+      "global-shortcut" = [ "<Super>v" ];
+      "play-audio-on-copy" = false;
+      "send-notification-on-copy" = false;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
@@ -83,11 +86,17 @@
       "workspace-names" = [ "Time & Task planning" ];
     };
 
+    "org/gnome/shell/keybindings" = {
+      "focus-active-notification" = [];
+    };
+
     "org/gnome/settings-daemon/plugins/media-keys" = {
       "custom-keybindings" = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
       ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -105,6 +114,12 @@
       "command" = "brave";
       "name" = "Open Browser";
     };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+      "binding" = "<Super>n";
+      "command" = "code --folder-uri=file://${config.home.homeDirectory}/nixos-config";
+      "name" = "Edit NixOS Config";
+    };
+
 
     "org/gnome/settings-daemon/plugins/power" = {
       "sleep-inactive-ac-timeout" = 0;

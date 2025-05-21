@@ -39,6 +39,11 @@
         update-etc = "sudo nix flake update --flake /etc/nixos/";
         update = "sudo nix flake update --flake ~/nixos-config";
 
+        edit = "code ~/nixos-config";
+
+        src = "source ~/.zshrc";
+
+        nv = "nvim";
         ff = "fastfetch";
         ls = "lsd -a";
       };

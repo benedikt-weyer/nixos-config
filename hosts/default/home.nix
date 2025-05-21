@@ -37,7 +37,7 @@
   home.username = "benedikt";
   home.homeDirectory = "/home/benedikt";
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
     nvtopPackages.nvidia
