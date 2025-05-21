@@ -94,6 +94,8 @@
     pkgs-unstable.windsurf
     pkgs-unstable.code-cursor
     
-
+    unigine-heaven
+    unigine-valley
+    unigine-superposition
   ];
 }
