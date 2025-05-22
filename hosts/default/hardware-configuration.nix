@@ -52,8 +52,8 @@
     enable = true;
     cpuFreqGovernor = "performance";
     cpufreq = {
-      min = 4700000;
-      max = 4700000;
+      min = 2700000;
+      max = 3700000;
     };
   };
 
