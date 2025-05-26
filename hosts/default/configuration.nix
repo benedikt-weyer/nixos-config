@@ -160,7 +160,7 @@
     extraSpecialArgs = { 
       inherit inputs; 
       inherit pkgs-unstable;
-      inherit pkgs-custom;
+      pkgs-custom = pkgs-custom pkgs;
     };
     users = {
       "benedikt" = import ./home.nix;
