@@ -4,10 +4,12 @@
   inputs = {
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-25.05";
+      #url = "https://channels.nixos.org/nixos-25.05/nixexprs.tar.xz";
     };
 
     nixpkgs-unstable = {
       url = "github:nixos/nixpkgs/nixos-unstable";
+      #url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
     };
 
     home-manager = {
